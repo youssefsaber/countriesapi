@@ -10,6 +10,8 @@ const config = require('./config');
 const errorHandler = require('./helpers/errorHandler');
 const countries = require('./controllers/api.controller');
 
+const slots = require('./services/slots.service');
+
 // middlewares
 app.use(morgan('dev'));
 app.use(bodyParser.json());
@@ -22,6 +24,15 @@ app.use(express.static('public'));
 // routes
 app.get('/', (req, res, next) => res.json({ status: 'OK', code: 200 }));
 app.use('/countries', countries);
+
+// Question 4 , Slots machine
+app.get('/slots', (req, res, next) => {
+  try {
+    return res.json(slots.spin());
+  } catch (error) {
+    next(error.message);
+  }
+});
 
 //global error handler
 app.use(errorHandler);
