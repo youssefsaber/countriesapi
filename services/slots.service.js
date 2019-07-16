@@ -1,7 +1,7 @@
 const reel1 = ['cherry', 'lemon', 'apple', 'lemon', 'banana', 'lemon', 'lemon'];
 const reel2 = ['lemon', 'apple', 'lemon', 'lemon', 'cherry', 'apple', 'bannana', 'lemon'];
 const reel3 = ['lemon', 'apple', 'lemon', 'apple', 'cherry', 'lemon', 'bannana', 'lemon'];
-let coins = 3;
+let coins = 20;
 
 function spin() {
   coins--;
