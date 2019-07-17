@@ -29,8 +29,9 @@ app.use('/slots', require('./controllers/slots.controller'));
 //global error handler
 app.use(errorHandler);
 
-app.listen(config.port, err => {
-  console.log(`app is listening on port ${config.port}`);
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, err => {
+  console.log(`app is listening on port ${PORT}`);
 });
 
 module.exports = app;
