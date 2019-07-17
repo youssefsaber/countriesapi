@@ -1,4 +1,4 @@
 module.exports = {
-  port: 4000,
+  port: 3000,
   api_url: 'https://restcountries.eu/rest/v2'
 };
